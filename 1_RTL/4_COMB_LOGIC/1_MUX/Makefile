@@ -9,8 +9,8 @@ set:
 compile:
 	xmvlog -MESS -linedebug ./*v
 elab:
-	xmelab -MESS -access rwc tb_pipeline
+	xmelab -MESS -access rwc tb_gpio_mux
 sim:
-	xmsim -MESS tb_pipeline
+	xmsim -MESS tb_gpio_mux -gui
 
 all: clean set compile elab sim

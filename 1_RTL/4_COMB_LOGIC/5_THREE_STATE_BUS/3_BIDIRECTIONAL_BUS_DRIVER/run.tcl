@@ -8,7 +8,7 @@ echo "define WORK work_lib" >> ./hdl.var
 xmvlog -MESS -linedebug ./*v
 
 # Elaborate compiled sources
-xmelab -MESS - access rwc tb_pipeline
+xmelab -MESS - access rwc tb_bidirectional_bus_driver
 
 # run simulation in CLI mode
-xmsim -MESS tb_pipeline -gui
+xmsim -MESS tb_bidirectional_bus_driver -gui
