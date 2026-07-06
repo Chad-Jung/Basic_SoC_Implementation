@@ -22,11 +22,11 @@ wire [7:0]  w_mux_out       ;
 assign w_select = i_en_a ^ i_en_b                   ;
 
     
-assign o_mux_out =  (i_en_a) ? i_data_a :
+assign w_mux_out =  (i_en_a) ? i_data_a :
                     (i_en_b) ? i_data_b :
                     8'bz                            ; 
 
     
-assign o_bus_data = (w_select) ? o_mux_out : 8'bz   ;
+assign o_bus_data = (w_select) ? w_mux_out : 8'bz   ;
 
 endmodule
