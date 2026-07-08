@@ -1,0 +1,654 @@
+[07/08 19:54:13      0s] 
+[07/08 19:54:13      0s] Cadence Innovus(TM) Implementation System.
+[07/08 19:54:13      0s] Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+[07/08 19:54:13      0s] 
+[07/08 19:54:13      0s] Version:	v22.17-s086_1, built Tue Sep 24 10:51:50 PDT 2024
+[07/08 19:54:13      0s] Options:	-stylus 
+[07/08 19:54:13      0s] Date:		Wed Jul  8 19:54:13 2026
+[07/08 19:54:13      0s] Host:		kopo-seongnam (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz 28160KB)
+[07/08 19:54:13      0s] OS:		CentOS Linux 7 (Core)
+[07/08 19:54:13      0s] 
+[07/08 19:54:13      0s] License:
+[07/08 19:54:13      0s] 		[19:54:13.158649] Configured Lic search path (22.01-s003): 5280@localhost
+[07/08 19:54:13      0s] 
+[07/08 19:54:13      0s] 		invs	Innovus Implementation System	22.1	Denied
+[07/08 19:54:13      0s] 		invsb	Innovus Implementation System Basic	22.1	checkout succeeded
+[07/08 19:54:13      0s] 		4 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[07/08 19:54:27     14s] 
+[07/08 19:54:27     14s] 
+[07/08 19:54:34     20s] Reset Parastics called with the command setExtractRCMode -reset@(#)CDS: Innovus v22.17-s086_1 (64bit) 09/24/2024 10:51 (Linux 3.10.0-693.el7.x86_64)
+[07/08 19:54:36     23s] @(#)CDS: NanoRoute 22.17-s086_1 NR240905-1647/22_17-UB (database version 18.20.629) {superthreading v2.20}
+[07/08 19:54:36     23s] @(#)CDS: AAE 22.17-s013 (64bit) 09/24/2024 (Linux 3.10.0-693.el7.x86_64)
+[07/08 19:54:36     23s] @(#)CDS: CTE 22.17-s017_1 () Sep 12 2024 04:53:54 ( )
+[07/08 19:54:36     23s] @(#)CDS: SYNTECH 22.17-s006_1 () Aug 12 2024 03:52:27 ( )
+[07/08 19:54:36     23s] @(#)CDS: CPE v22.17-s051
+[07/08 19:54:36     23s] @(#)CDS: IQuantus/TQuantus 21.2.2-s369 (64bit) Tue May 7 14:30:42 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+[07/08 19:54:36     23s] @(#)CDS: OA 22.60-p095 Wed Apr 17 03:30:14 2024
+[07/08 19:54:36     23s] @(#)CDS: SGN 22.20-d001 (02-Jan-2023) (64 bit executable, TkQt5.9.1)
+[07/08 19:54:36     23s] @(#)CDS: RCDB 11.15.0
+[07/08 19:54:36     23s] @(#)CDS: STYLUS 22.15-s003_1 (04/04/2024 05:58 PDT)
+[07/08 19:54:36     23s] @(#)CDS: IntegrityPlanner-22.17-15746 (22.17) (2024-07-03 11:16:10+0800)
+[07/08 19:54:36     23s] Create and set the environment variable TMPDIR to /home/hah014/Basic_SoC_Implementation/5_APR/7_APR/0_SAMPLE/innovus_temp_158235_f754e7be-36c9-4a2d-9f84-d20056e99c73_kopo-seongnam_hah014_1H1NnW.
+
+[07/08 19:54:36     23s] Create and set the environment variable TMPDIR to /home/hah014/Basic_SoC_Implementation/5_APR/7_APR/0_SAMPLE/innovus_temp_158235_f754e7be-36c9-4a2d-9f84-d20056e99c73_kopo-seongnam_hah014_1H1NnW.
+[07/08 19:54:36     23s] 
+[07/08 19:54:36     23s] Change the soft stacksize limit to 0.2%RAM (770 mbytes). Set global soft_stack_size_limit to change the value.
+[07/08 19:54:38     25s] 
+[07/08 19:54:38     25s] **INFO:  MMMC transition support version v31-84 
+[07/08 19:54:38     25s] 
+[07/08 19:54:42     28s] @innovus 1> set_db init_power_nets VDD
+[07/08 20:12:34    120s] @innovus 2> set_db init_ground_nets VSS
+[07/08 20:12:34    120s] @innovus 3> #################################
+[07/08 20:12:34    120s] read_mmmc sample.view
+[07/08 20:12:34    120s] #################################
+[07/08 20:12:34    120s] #@ Begin verbose source sample.view (pre)
+[07/08 20:12:34    120s] @file 1:
+[07/08 20:12:34    120s] @@file 2: create_library_set -name max_timing\
+[07/08 20:12:34    120s]    -timing ../../1_LIB/slow_vdd1v0_basicCells.lib
+[07/08 20:12:34    120s] @file 4:
+[07/08 20:12:34    120s] @@file 5: create_library_set -name min_timing\
+[07/08 20:12:34    120s]    -timing ../../1_LIB/fast_vdd1v0_basicCells.lib
+[07/08 20:12:34    120s] @file 7:
+[07/08 20:12:34    120s] @@file 8: create_timing_condition -name default_mapping_tc_2\
+[07/08 20:12:34    120s]    -library_sets min_timing
+[07/08 20:12:34    120s] @@file 10: create_timing_condition -name default_mapping_tc_1\
+[07/08 20:12:34    120s]    -library_sets max_timing
+[07/08 20:12:34    120s] @file 12:
+[07/08 20:12:34    120s] @@file 13: create_rc_corner -name rccorners\
+[07/08 20:12:34    120s]    -cap_table ../../4_CAP_TABLE/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl\
+[07/08 20:12:34    120s]    -pre_route_res 1\
+[07/08 20:12:34    120s]    -post_route_res 1\
+[07/08 20:12:34    120s]    -pre_route_cap 1\
+[07/08 20:12:34    120s]    -post_route_cap 1\
+[07/08 20:12:34    120s]    -post_route_cross_cap 1\
+[07/08 20:12:34    120s]    -pre_route_clock_res 0\
+[07/08 20:12:34    120s]    -pre_route_clock_cap 0\
+[07/08 20:12:34    120s]    -qrc_tech ../../5_QRC_TECH/gpdk045.tch
+[07/08 20:12:34    120s] @file 23:
+[07/08 20:12:34    120s] @@file 24: create_delay_corner -name max_delay\
+[07/08 20:12:34    120s]    -timing_condition {default_mapping_tc_1}\
+[07/08 20:12:34    120s]    -rc_corner rccorners
+[07/08 20:12:34    120s] @@file 27: create_delay_corner -name min_delay\
+[07/08 20:12:34    120s]    -timing_condition {default_mapping_tc_2}\
+[07/08 20:12:34    120s]    -rc_corner rccorners
+[07/08 20:12:34    120s] @file 30:
+[07/08 20:12:34    120s] @@file 31: create_constraint_mode -name sdc_cons\
+[07/08 20:12:34    120s]    -sdc_files\
+[07/08 20:12:34    120s]     ../../2_CONSTRAINTS/0_SAMPLE/counter_sdc.sdc
+[07/08 20:12:34    120s] @file 34:
+[07/08 20:12:34    120s] @@file 35: create_analysis_view -name wc -constraint_mode sdc_cons -delay_corner max_delay
+[07/08 20:12:34    120s] @@file 36: create_analysis_view -name bc -constraint_mode sdc_cons -delay_corner min_delay
+[07/08 20:12:34    120s] @file 37:
+[07/08 20:12:34    120s] @@file 38: set_analysis_view -setup wc -hold bc
+[07/08 20:12:34    120s] @file 39:
+[07/08 20:12:34    120s] @file 40:
+[07/08 20:12:34    120s] #@ End verbose source sample.view
+[07/08 20:12:34    120s] Reading max_timing timing library '/home/hah014/Basic_SoC_Implementation/5_APR/1_LIB/slow_vdd1v0_basicCells.lib' ...
+[07/08 20:12:35    120s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/hah014/Basic_SoC_Implementation/5_APR/1_LIB/slow_vdd1v0_basicCells.lib)
+[07/08 20:12:35    121s] Read 480 cells in library 'slow_vdd1v0' 
+[07/08 20:12:35    121s] Reading min_timing timing library '/home/hah014/Basic_SoC_Implementation/5_APR/1_LIB/fast_vdd1v0_basicCells.lib' ...
+[07/08 20:12:35    121s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/hah014/Basic_SoC_Implementation/5_APR/1_LIB/fast_vdd1v0_basicCells.lib)
+[07/08 20:12:35    121s] Read 480 cells in library 'fast_vdd1v0' 
+[07/08 20:12:35    121s] Ending "PreSetAnalysisView" (total cpu=0:00:01.4, real=0:00:01.0, peak res=1449.5M, current mem=1395.1M)
+[07/08 20:12:35    121s] #################################
+[07/08 20:12:35    121s] read_physical -lef {../../3_LEF/gsclib045_tech.lef ../../3_LEF/gsclib045_macro.lef}
+[07/08 20:12:35    121s] #################################
+[07/08 20:12:35    121s] 
+[07/08 20:12:35    121s] Loading LEF file ../../3_LEF/gsclib045_tech.lef ...
+[07/08 20:12:35    121s] Set DBUPerIGU to M2 pitch 400.
+[07/08 20:12:35    121s] 
+[07/08 20:12:35    121s] Loading LEF file ../../3_LEF/gsclib045_macro.lef ...
+[07/08 20:12:36    122s] **WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[07/08 20:12:36    122s] Type 'man IMPLF-200' for more detail.
+[07/08 20:12:36    122s] 
+[07/08 20:12:36    122s] ##  Check design process and node:  
+[07/08 20:12:36    122s] ##  Both design process and tech node are not set.
+[07/08 20:12:36    122s] 
+[07/08 20:12:36    122s] #################################
+[07/08 20:12:36    122s] read_netlist ../../6_GLN/0_SAMPLE/counter_netlist.v
+[07/08 20:12:36    122s] #################################
+[07/08 20:12:36    122s] #% Begin Load netlist data ... (date=07/08 20:12:36, mem=1403.0M)
+[07/08 20:12:36    122s] *** Begin netlist parsing (mem=1642.1M) ***
+[07/08 20:12:36    122s] Created 480 new cells from 2 timing libraries.
+[07/08 20:12:36    122s] Reading netlist ...
+[07/08 20:12:36    122s] Backslashed names will retain backslash and a trailing blank character.
+[07/08 20:12:36    122s] Reading verilog netlist '../../6_GLN/0_SAMPLE/counter_netlist.v'
+[07/08 20:12:36    122s] 
+[07/08 20:12:36    122s] *** Memory Usage v#1 (Current mem = 1645.070M, initial mem = 654.375M) ***
+[07/08 20:12:36    122s] *** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1645.1M) ***
+[07/08 20:12:36    122s] #% End Load netlist data ... (date=07/08 20:12:36, total cpu=0:00:00.0, real=0:00:00.0, peak res=1413.2M, current mem=1413.2M)
+[07/08 20:12:36    122s] Top level cell is counter.
+[07/08 20:12:36    122s] Hooked 960 DB cells to tlib cells.
+[07/08 20:12:36    122s] Ending "BindLib:" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1431.4M, current mem=1431.4M)
+[07/08 20:12:36    122s] Starting recursive module instantiation check.
+[07/08 20:12:36    122s] No recursion found.
+[07/08 20:12:36    122s] Building hierarchical netlist for Cell counter ...
+[07/08 20:12:36    122s] ***** UseNewTieNetMode *****.
+[07/08 20:12:36    122s] *** Netlist is unique.
+[07/08 20:12:36    122s] Setting Std. cell height to 3420 DBU (smallest netlist inst).
+[07/08 20:12:36    122s] ** info: there are 1055 modules.
+[07/08 20:12:36    122s] ** info: there are 21 stdCell insts.
+[07/08 20:12:36    122s] ** info: there are 21 stdCell insts with at least one signal pin.
+[07/08 20:12:36    122s] 
+[07/08 20:12:36    122s] *** Memory Usage v#1 (Current mem = 1706.496M, initial mem = 654.375M) ***
+[07/08 20:12:36    122s] **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[07/08 20:12:36    122s] Type 'man IMPFP-3961' for more detail.
+[07/08 20:12:36    122s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[07/08 20:12:36    122s] Type 'man IMPFP-3961' for more detail.
+[07/08 20:12:36    122s] Start create_tracks
+[07/08 20:12:36    122s] Extraction setup Started 
+[07/08 20:12:36    122s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[07/08 20:12:36    122s] **WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for pre_route and post_route extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for pre_route and post_route (effort level medium/high/signoff) extraction engines.
+[07/08 20:12:36    122s] Type 'man IMPEXT-6202' for more detail.
+[07/08 20:12:36    122s] Reading Capacitance Table File ../../4_CAP_TABLE/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl ...
+[07/08 20:12:36    122s] Cap table was created using Encounter 10.10-b056_1.
+[07/08 20:12:36    122s] Process name: cln28hpl_1p10m+alrdl_5x2yu2yz_typical.
+[07/08 20:12:36    122s] Set Shrink Factor to 0.90000
+[07/08 20:12:36    122s] Importing multi-corner RC tables ... 
+[07/08 20:12:36    122s] Summary of Active RC-Corners : 
+[07/08 20:12:36    122s]  
+[07/08 20:12:36    122s]  Analysis View: wc
+[07/08 20:12:36    122s]     RC-Corner Name        : rccorners
+[07/08 20:12:36    122s]     RC-Corner Index       : 0
+[07/08 20:12:36    122s]     RC-Corner Temperature : 25 Celsius
+[07/08 20:12:36    122s]     RC-Corner Cap Table   : '../../4_CAP_TABLE/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl'
+[07/08 20:12:36    122s]     RC-Corner PreRoute Res Factor         : 1
+[07/08 20:12:36    122s]     RC-Corner PreRoute Cap Factor         : 1
+[07/08 20:12:36    122s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[07/08 20:12:36    122s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[07/08 20:12:36    122s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[07/08 20:12:36    122s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[07/08 20:12:36    122s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[07/08 20:12:36    122s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[07/08 20:12:36    122s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[07/08 20:12:36    122s]     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+[07/08 20:12:36    122s]     RC-Corner Technology file: '../../5_QRC_TECH/gpdk045.tch'
+[07/08 20:12:36    122s]  
+[07/08 20:12:36    122s]  Analysis View: bc
+[07/08 20:12:36    122s]     RC-Corner Name        : rccorners
+[07/08 20:12:36    122s]     RC-Corner Index       : 0
+[07/08 20:12:36    122s]     RC-Corner Temperature : 25 Celsius
+[07/08 20:12:36    122s]     RC-Corner Cap Table   : '../../4_CAP_TABLE/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl'
+[07/08 20:12:36    122s]     RC-Corner PreRoute Res Factor         : 1
+[07/08 20:12:36    122s]     RC-Corner PreRoute Cap Factor         : 1
+[07/08 20:12:36    122s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[07/08 20:12:36    122s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[07/08 20:12:36    122s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[07/08 20:12:36    122s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[07/08 20:12:36    122s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[07/08 20:12:36    122s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[07/08 20:12:36    122s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[07/08 20:12:36    122s]     RC-Corner PostRoute Clock coupling capacitance Factor : 1 {1 1 1} 
+[07/08 20:12:36    122s]     RC-Corner Technology file: '../../5_QRC_TECH/gpdk045.tch'
+[07/08 20:12:36    122s] eee: RC Grid memory allocated = 528 (2 X 2 X 11 X 12b)
+[07/08 20:12:36    122s] eee: pegSigSF=1.070000
+[07/08 20:12:36    122s] Updating RC Grid density data for preRoute extraction ...
+[07/08 20:12:36    122s] Initializing multi-corner capacitance tables ... 
+[07/08 20:12:36    122s] Initializing multi-corner resistance tables ...
+[07/08 20:12:36    122s] Creating RPSQ from WeeR and WRes ...
+[07/08 20:12:36    122s] eee: Grid unit RC data computation started
+[07/08 20:12:36    122s] eee: Grid unit RC data computation completed
+[07/08 20:12:36    122s] eee: l=1 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=2 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=3 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=4 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=5 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=6 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=7 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=8 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=9 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=10 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] eee: l=11 avDens=0.000000 usedTrk=0.000000 availTrk=0.000000 sigTrk=0.000000
+[07/08 20:12:36    122s] {RT rccorners 0 11 11 {7 0} {10 0} 2}
+[07/08 20:12:36    122s] eee: LAM-FP: thresh=1 ; dimX=63.763158 ; dimY=45.000000 ; multX=1.000000 ; multY=1.000000 ; minP=380 ; fpMult=1.000000 ;
+[07/08 20:12:36    122s] eee: LAM: n=40 LLS=2-3 HLS=3-5 rDens=0.000000 uaWl=0.000000 uaWlH=0.000000 aWlH=0.000000 lMod=0 pMax=0.850000 pMod=82 pModAss=50 wcR=0.772700 crit=0.000000 siPrev=0 newSi=0.000000 wHLS=1.931800 viaL=0.000000 shortMod=0.000000 fModUnas=0.000000 fModAs=0.000000 pDens=0.500000 
+[07/08 20:12:36    122s] eee: NetCapCache creation started. (Current Mem: 1877.629M) 
+[07/08 20:12:36    122s] eee: NetCapCache completed. (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  Curr Mem: 1877.629M) 
+[07/08 20:12:36    122s] eee: dbu = 2000, Design = [ll(0.000000, 0.000000) ur(12.115000, 8.550000)], Layers = [f(11) b(0)], Grid size = 17.100000 um, Grid Dim = (1 X 1)
+[07/08 20:12:36    122s] eee: Metal Layers Info:
+[07/08 20:12:36    122s] eee: +----------+-----+---------+---------+---------+--------+--------+---+---+----+
+[07/08 20:12:36    122s] eee: |   Layer  |  Id |    W    |    S    |    P    |   uC   |   uR   | D | T | wS |
+[07/08 20:12:36    122s] eee: +----------+-----+---------+---------+---------+--------+--------+---+---+----+
+[07/08 20:12:36    122s] eee: |   Metal1 |   1 |   0.060 |   0.060 |   0.190 |  0.161 |   4.00 | H | 0 |  4 |
+[07/08 20:12:36    122s] eee: |   Metal2 |   2 |   0.080 |   0.070 |   0.200 |  0.161 |   3.81 | V | 0 |  4 |
+[07/08 20:12:36    122s] eee: |   Metal3 |   3 |   0.080 |   0.070 |   0.190 |  0.161 |   3.96 | H | 0 |  4 |
+[07/08 20:12:36    122s] eee: |   Metal4 |   4 |   0.080 |   0.070 |   0.200 |  0.159 |   3.81 | V | 0 |  4 |
+[07/08 20:12:36    122s] eee: |   Metal5 |   5 |   0.080 |   0.070 |   0.190 |  0.161 |   3.96 | H | 0 |  4 |
+[07/08 20:12:36    122s] eee: |   Metal6 |   6 |   0.080 |   0.070 |   0.200 |  0.158 |   3.81 | V | 0 |  4 |
+[07/08 20:12:36    122s] eee: |   Metal7 |   7 |   0.080 |   0.070 |   0.190 |  0.328 |   1.19 | H | 0 |  5 |
+[07/08 20:12:36    122s] eee: |   Metal8 |   8 |   0.080 |   0.070 |   0.200 |  0.351 |   1.08 | V | 0 |  5 |
+[07/08 20:12:36    122s] eee: |   Metal9 |   9 |   0.080 |   0.070 |   0.190 |  0.679 |   0.44 | H | 0 |  5 |
+[07/08 20:12:36    122s] eee: |  Metal10 |  10 |   0.220 |   0.200 |   0.500 |  0.370 |   0.16 | V | 0 |  4 |
+[07/08 20:12:36    122s] eee: |  Metal11 |  11 |   0.220 |   0.200 |   0.475 |  1.032 |   0.10 | H | 0 |  3 |
+[07/08 20:12:36    122s] eee: +----------+-----+---------+---------+---------+--------+--------+---+---+----+
+[07/08 20:12:36    122s] eee: uC/uR for corner rccorners, min-width/min-spacing, 30 perc over/under densities.
+[07/08 20:12:36    122s] eee: +-----------------------NDR Info-----------------------+
+[07/08 20:12:36    122s] eee: Number of NDR:: 2,  Number of Fake NDR:: 0
+[07/08 20:12:36    122s] eee: +----------------------------------------------------+
+[07/08 20:12:36    122s] eee: | NDR Name:: LEFSpecialRouteSpec  | Id:: 1  | isHard:: 0 
+[07/08 20:12:36    122s] eee: +----------------------------------------------------+
+[07/08 20:12:36    122s] eee: +----------------------------------------------------+
+[07/08 20:12:36    122s] eee: | NDR Name:: VLMDefaultSetup  | Id:: 2  | isHard:: 0 
+[07/08 20:12:36    122s] eee: +----------------------------------------------------+
+[07/08 20:12:36    122s] *Info: initialize multi-corner CTS.
+[07/08 20:12:36    122s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1701.3M, current mem=1464.3M)
+[07/08 20:12:37    123s] Reading timing constraints file '../../2_CONSTRAINTS/0_SAMPLE/counter_sdc.sdc' ...
+[07/08 20:12:37    123s] Current (total cpu=0:02:03, real=0:18:24, peak res=1836.9M, current mem=1836.9M)
+[07/08 20:12:37    123s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../../2_CONSTRAINTS/0_SAMPLE/counter_sdc.sdc, Line 9).
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../../2_CONSTRAINTS/0_SAMPLE/counter_sdc.sdc, Line 10).
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] counter
+[07/08 20:12:37    123s] INFO (CTE): Reading of timing constraints file ../../2_CONSTRAINTS/0_SAMPLE/counter_sdc.sdc completed, with 2 WARNING
+[07/08 20:12:37    123s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=1850.8M, current mem=1850.8M)
+[07/08 20:12:37    123s] Current (total cpu=0:02:03, real=0:18:24, peak res=1850.8M, current mem=1850.8M)
+[07/08 20:12:37    123s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) Begin ...
+[07/08 20:12:37    123s] SBFF Setting to complicate: SMDFFHQX8 complicate code: 30.1
+[07/08 20:12:37    123s] SBFF Setting to complicate: SMDFFHQX4 complicate code: 30.1
+[07/08 20:12:37    123s] SBFF Setting to complicate: SMDFFHQX2 complicate code: 30.1
+[07/08 20:12:37    123s] SBFF Setting to complicate: SMDFFHQX1 complicate code: 30.1
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFTRXL complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFTRX4 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFTRX2 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFTRX1 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFHQX8 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFHQX4 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFHQX2 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFHQX1 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: EDFFTRXL complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: EDFFTRX4 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: EDFFTRX2 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: EDFFTRX1 complicate code: 30.05
+[07/08 20:12:37    123s] Summary for sequential cells identification: 
+[07/08 20:12:37    123s]   Identified SBFF number: 104
+[07/08 20:12:37    123s]   Identified MBFF number: 0
+[07/08 20:12:37    123s]   Identified SB Latch number: 0
+[07/08 20:12:37    123s]   Identified MB Latch number: 0
+[07/08 20:12:37    123s]   Not identified SBFF number: 16
+[07/08 20:12:37    123s]   Not identified MBFF number: 0
+[07/08 20:12:37    123s]   Not identified SB Latch number: 0
+[07/08 20:12:37    123s]   Not identified MB Latch number: 0
+[07/08 20:12:37    123s]   Number of sequential cells which are not FFs: 32
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) End ...
+[07/08 20:12:37    123s] Total number of combinational cells: 318
+[07/08 20:12:37    123s] Total number of sequential cells: 152
+[07/08 20:12:37    123s] Total number of tristate cells: 10
+[07/08 20:12:37    123s] Total number of level shifter cells: 0
+[07/08 20:12:37    123s] Total number of power gating cells: 0
+[07/08 20:12:37    123s] Total number of isolation cells: 0
+[07/08 20:12:37    123s] Total number of power switch cells: 0
+[07/08 20:12:37    123s] Total number of pulse generator cells: 0
+[07/08 20:12:37    123s] Total number of always on buffers: 0
+[07/08 20:12:37    123s] Total number of retention cells: 0
+[07/08 20:12:37    123s] Total number of physical cells: 0
+[07/08 20:12:37    123s] List of usable buffers: BUFX2 BUFX12 BUFX16 BUFX20 CLKBUFX2 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+[07/08 20:12:37    123s] Total number of usable buffers: 16
+[07/08 20:12:37    123s] List of unusable buffers:
+[07/08 20:12:37    123s] Total number of unusable buffers: 0
+[07/08 20:12:37    123s] List of usable inverters: CLKINVX1 CLKINVX2 CLKINVX12 CLKINVX16 CLKINVX20 CLKINVX4 CLKINVX3 CLKINVX6 CLKINVX8 INVX1 INVX2 INVX12 INVX16 INVX20 INVXL INVX3 INVX4 INVX6 INVX8
+[07/08 20:12:37    123s] Total number of usable inverters: 19
+[07/08 20:12:37    123s] List of unusable inverters:
+[07/08 20:12:37    123s] Total number of unusable inverters: 0
+[07/08 20:12:37    123s] List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4
+[07/08 20:12:37    123s] Total number of identified usable delay cells: 8
+[07/08 20:12:37    123s] List of identified unusable delay cells:
+[07/08 20:12:37    123s] Total number of identified unusable delay cells: 0
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] TimeStamp Deleting Cell Server Begin ...
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] TimeStamp Deleting Cell Server End ...
+[07/08 20:12:37    123s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=1872.3M, current mem=1872.2M)
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
+[07/08 20:12:37    123s] SBFF Setting to complicate: SMDFFHQX8 complicate code: 30.1
+[07/08 20:12:37    123s] SBFF Setting to complicate: SMDFFHQX4 complicate code: 30.1
+[07/08 20:12:37    123s] SBFF Setting to complicate: SMDFFHQX2 complicate code: 30.1
+[07/08 20:12:37    123s] SBFF Setting to complicate: SMDFFHQX1 complicate code: 30.1
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFTRXL complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFTRX4 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFTRX2 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFTRX1 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFHQX8 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFHQX4 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFHQX2 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: SEDFFHQX1 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: EDFFTRXL complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: EDFFTRX4 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: EDFFTRX2 complicate code: 30.05
+[07/08 20:12:37    123s] SBFF Setting to complicate: EDFFTRX1 complicate code: 30.05
+[07/08 20:12:37    123s] Summary for sequential cells identification: 
+[07/08 20:12:37    123s]   Identified SBFF number: 104
+[07/08 20:12:37    123s]   Identified MBFF number: 0
+[07/08 20:12:37    123s]   Identified SB Latch number: 0
+[07/08 20:12:37    123s]   Identified MB Latch number: 0
+[07/08 20:12:37    123s]   Not identified SBFF number: 16
+[07/08 20:12:37    123s]   Not identified MBFF number: 0
+[07/08 20:12:37    123s]   Not identified SB Latch number: 0
+[07/08 20:12:37    123s]   Not identified MB Latch number: 0
+[07/08 20:12:37    123s]   Number of sequential cells which are not FFs: 32
+[07/08 20:12:37    123s]  Visiting view : wc
+[07/08 20:12:37    123s]    : PowerDomain = none : Weighted F : unweighted  = 36.80 (1.000) with rcCorner = 0
+[07/08 20:12:37    123s]    : PowerDomain = none : Weighted F : unweighted  = 20.10 (1.000) with rcCorner = -1
+[07/08 20:12:37    123s]  Visiting view : bc
+[07/08 20:12:37    123s]    : PowerDomain = none : Weighted F : unweighted  = 11.90 (1.000) with rcCorner = 0
+[07/08 20:12:37    123s]    : PowerDomain = none : Weighted F : unweighted  = 5.30 (1.000) with rcCorner = -1
+[07/08 20:12:37    123s] TLC MultiMap info (StdDelay):
+[07/08 20:12:37    123s]   : min_delay + min_timing + 1 + no RcCorner := 5.3ps
+[07/08 20:12:37    123s]   : min_delay + min_timing + 1 + rccorners := 11.9ps
+[07/08 20:12:37    123s]   : max_delay + max_timing + 1 + no RcCorner := 20.1ps
+[07/08 20:12:37    123s]   : max_delay + max_timing + 1 + rccorners := 36.8ps
+[07/08 20:12:37    123s]  Setting StdDelay to: 36.8ps
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] TimeStamp Deleting Cell Server Begin ...
+[07/08 20:12:37    123s] 
+[07/08 20:12:37    123s] TimeStamp Deleting Cell Server End ...
+[07/08 20:12:53    126s] gui_pan 8.70700 7.91150
+[07/08 20:12:53    126s] @innovus 4> gui_pan 7.65700 3.15000
+[07/08 20:12:57    128s] @innovus 5> gui_pan 0.69400 -2.82250
+[07/08 20:13:05    130s] @innovus 6> Adjusting coreMargin left    to finFet grid (PlacementGrid) : after adjusting :2.6
+[07/08 20:16:08    140s] Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :2.66
+[07/08 20:16:08    140s] Adjusting coreMargin right   to finFet grid (PlacementGrid) : after adjusting :2.6
+[07/08 20:16:08    140s] Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :2.66
+[07/08 20:16:08    140s] Adjusting core size to PlacementGrid : width :12.2 height : 8.55
+[07/08 20:16:08    140s] **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[07/08 20:16:08    140s] Type 'man IMPFP-3961' for more detail.
+[07/08 20:16:08    140s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[07/08 20:16:08    140s] Type 'man IMPFP-3961' for more detail.
+[07/08 20:16:08    140s] Start create_tracks
+[07/08 20:16:09    141s] @innovus 6> gui_pan -6.37150 -0.41000
+[07/08 20:16:36    145s] @innovus 7> Adjusting coreMargin left    to finFet grid (PlacementGrid) : after adjusting :2.6
+[07/08 20:18:00    155s] Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :2.66
+[07/08 20:18:00    155s] Adjusting coreMargin right   to finFet grid (PlacementGrid) : after adjusting :2.6
+[07/08 20:18:00    155s] Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :2.66
+[07/08 20:18:00    155s] **WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[07/08 20:18:00    155s] Type 'man IMPFP-3961' for more detail.
+[07/08 20:18:00    155s] **WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[07/08 20:18:00    155s] Type 'man IMPFP-3961' for more detail.
+[07/08 20:18:00    155s] Start create_tracks
+[07/08 20:18:00    155s] @innovus 7> The ring targets are set to core/block ring wires.
+[07/08 22:34:15    555s] add_rings command will consider rows while creating rings.
+[07/08 22:34:15    555s] add_rings command will disallow rings to go over rows.
+[07/08 22:34:15    555s] add_rings command will ignore shorts while creating rings.
+[07/08 22:34:15    555s] The ring targets are set to core/block ring wires.
+[07/08 22:34:15    555s] add_rings command will consider rows while creating rings.
+[07/08 22:34:15    555s] add_rings command will disallow rings to go over rows.
+[07/08 22:34:15    555s] add_rings command will ignore shorts while creating rings.
+[07/08 22:34:15    555s] 
+[07/08 22:34:15    555s] 
+[07/08 22:34:15    555s] viaInitial starts at Wed Jul  8 22:34:15 2026
+[07/08 22:34:15    555s] viaInitial ends at Wed Jul  8 22:34:15 2026
+[07/08 22:34:15    555s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:34:15    555s] Ring generation is complete.
+[07/08 22:34:15    555s] vias are now being generated.
+[07/08 22:34:15    555s] add_rings created 8 wires.
+[07/08 22:34:15    555s] ViaGen created 8 vias, deleted 0 via to avoid violation.
+[07/08 22:34:15    555s] +--------+----------------+----------------+
+[07/08 22:34:15    555s] |  Layer |     Created    |     Deleted    |
+[07/08 22:34:15    555s] +--------+----------------+----------------+
+[07/08 22:34:15    555s] | Metal10|        4       |       NA       |
+[07/08 22:34:15    555s] |  Via10 |        8       |        0       |
+[07/08 22:34:15    555s] | Metal11|        4       |       NA       |
+[07/08 22:34:15    555s] +--------+----------------+----------------+
+[07/08 22:34:15    555s] @innovus 7> The ring targets are set to core/block ring wires.
+[07/08 22:34:23    556s] add_rings command will consider rows while creating rings.
+[07/08 22:34:23    556s] add_rings command will disallow rings to go over rows.
+[07/08 22:34:23    556s] add_rings command will ignore shorts while creating rings.
+[07/08 22:34:23    556s] The ring targets are set to core/block ring wires.
+[07/08 22:34:23    556s] add_rings command will consider rows while creating rings.
+[07/08 22:34:23    556s] add_rings command will disallow rings to go over rows.
+[07/08 22:34:23    556s] add_rings command will ignore shorts while creating rings.
+[07/08 22:34:23    556s] 
+[07/08 22:34:23    556s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:34:23    556s] Ring generation is complete.
+[07/08 22:34:24    556s] @innovus 7> The ring targets are set to core/block ring wires.
+[07/08 22:35:45    567s] add_rings command will consider rows while creating rings.
+[07/08 22:35:45    567s] add_rings command will disallow rings to go over rows.
+[07/08 22:35:45    567s] add_rings command will ignore shorts while creating rings.
+[07/08 22:35:45    567s] The ring targets are set to core/block ring wires.
+[07/08 22:35:45    567s] add_rings command will consider rows while creating rings.
+[07/08 22:35:45    567s] add_rings command will disallow rings to go over rows.
+[07/08 22:35:45    567s] add_rings command will ignore shorts while creating rings.
+[07/08 22:35:45    567s] 
+[07/08 22:35:45    567s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:35:45    567s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:35:45    567s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:35:45    567s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:35:45    567s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:35:45    567s] Ring generation is complete.
+[07/08 22:35:45    567s] @innovus 7> The ring targets are set to core/block ring wires.
+[07/08 22:35:47    567s] add_rings command will consider rows while creating rings.
+[07/08 22:35:47    567s] add_rings command will disallow rings to go over rows.
+[07/08 22:35:47    567s] add_rings command will ignore shorts while creating rings.
+[07/08 22:35:47    567s] The ring targets are set to core/block ring wires.
+[07/08 22:35:47    567s] add_rings command will consider rows while creating rings.
+[07/08 22:35:47    567s] add_rings command will disallow rings to go over rows.
+[07/08 22:35:47    567s] add_rings command will ignore shorts while creating rings.
+[07/08 22:35:47    567s] 
+[07/08 22:35:47    567s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:35:47    567s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:35:47    567s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:35:47    567s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:35:47    567s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:35:47    567s] Ring generation is complete.
+[07/08 22:35:48    567s] @innovus 7> The ring targets are set to core/block ring wires.
+[07/08 22:36:14    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:14    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:14    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:14    570s] The ring targets are set to core/block ring wires.
+[07/08 22:36:14    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:14    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:14    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:14    570s] 
+[07/08 22:36:14    570s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] Ring generation is complete.
+[07/08 22:36:14    570s] The ring targets are set to core/block ring wires.
+[07/08 22:36:14    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:14    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:14    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:14    570s] The ring targets are set to core/block ring wires.
+[07/08 22:36:14    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:14    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:14    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:14    570s] 
+[07/08 22:36:14    570s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] Ring generation is complete.
+[07/08 22:36:14    570s] The ring targets are set to core/block ring wires.
+[07/08 22:36:14    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:14    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:14    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:14    570s] The ring targets are set to core/block ring wires.
+[07/08 22:36:14    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:14    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:14    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:14    570s] 
+[07/08 22:36:14    570s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:14    570s] Ring generation is complete.
+[07/08 22:36:15    570s] The ring targets are set to core/block ring wires.
+[07/08 22:36:15    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:15    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:15    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:15    570s] The ring targets are set to core/block ring wires.
+[07/08 22:36:15    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:15    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:15    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:15    570s] 
+[07/08 22:36:15    570s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:36:15    570s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    570s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    570s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    570s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    570s] Ring generation is complete.
+[07/08 22:36:15    570s] The ring targets are set to core/block ring wires.
+[07/08 22:36:15    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:15    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:15    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:15    570s] The ring targets are set to core/block ring wires.
+[07/08 22:36:15    570s] add_rings command will consider rows while creating rings.
+[07/08 22:36:15    570s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:15    570s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:15    570s] 
+[07/08 22:36:15    570s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:36:15    570s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    570s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    570s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    570s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    570s] Ring generation is complete.
+[07/08 22:36:15    571s] The ring targets are set to core/block ring wires.
+[07/08 22:36:15    571s] add_rings command will consider rows while creating rings.
+[07/08 22:36:15    571s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:15    571s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:15    571s] The ring targets are set to core/block ring wires.
+[07/08 22:36:15    571s] add_rings command will consider rows while creating rings.
+[07/08 22:36:15    571s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:15    571s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:15    571s] 
+[07/08 22:36:15    571s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:36:15    571s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    571s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    571s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    571s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:15    571s] Ring generation is complete.
+[07/08 22:36:15    571s] @innovus 7> The ring targets are set to core/block ring wires.
+[07/08 22:36:18    571s] add_rings command will consider rows while creating rings.
+[07/08 22:36:18    571s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:18    571s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:18    571s] The ring targets are set to core/block ring wires.
+[07/08 22:36:18    571s] add_rings command will consider rows while creating rings.
+[07/08 22:36:18    571s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:18    571s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:18    571s] 
+[07/08 22:36:18    571s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:36:18    571s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:18    571s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:18    571s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:18    571s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:18    571s] Ring generation is complete.
+[07/08 22:36:18    571s] @innovus 7> The ring targets are set to core/block ring wires.
+[07/08 22:36:25    571s] add_rings command will consider rows while creating rings.
+[07/08 22:36:25    571s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:25    571s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:25    571s] The ring targets are set to core/block ring wires.
+[07/08 22:36:25    571s] add_rings command will consider rows while creating rings.
+[07/08 22:36:25    571s] add_rings command will disallow rings to go over rows.
+[07/08 22:36:25    571s] add_rings command will ignore shorts while creating rings.
+[07/08 22:36:25    571s] 
+[07/08 22:36:25    571s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3279.5M)
+[07/08 22:36:25    571s] **WARN: (IMPPP-193):	The currently specified top spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:25    571s] **WARN: (IMPPP-193):	The currently specified bottom spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal11 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:25    571s] **WARN: (IMPPP-193):	The currently specified left spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:25    571s] **WARN: (IMPPP-193):	The currently specified right spacing 0.200000  might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:36:25    571s] Ring generation is complete.
+[07/08 22:36:25    572s] @innovus 7> add_stripes will allow jog to connect padcore ring and block ring.
+[07/08 22:39:20    590s] 
+[07/08 22:39:20    590s] Stripes will stop at the boundary of the specified area.
+[07/08 22:39:20    590s] When breaking rings, the power planner will consider the existence of blocks.
+[07/08 22:39:20    590s] Stripes will not extend to closest target.
+[07/08 22:39:20    590s] The power planner will set stripe antenna targets to none (no trimming allowed).
+[07/08 22:39:20    590s] Stripes will not be created over regions without power planning wires.
+[07/08 22:39:20    590s] The entire stripe set will break at the domain if one of the nets is not in the domain.
+[07/08 22:39:20    590s] add_stripes will break automatically at non-default domains when generating global stripes over the core area or default domain.
+[07/08 22:39:20    590s] Offset for stripe breaking is set to 0.
+[07/08 22:39:20    590s] add_stripes will allow jog to connect padcore ring and block ring.
+[07/08 22:39:20    590s] 
+[07/08 22:39:20    590s] Stripes will stop at the boundary of the specified area.
+[07/08 22:39:20    590s] When breaking rings, the power planner will consider the existence of blocks.
+[07/08 22:39:20    590s] Stripes will not extend to closest target.
+[07/08 22:39:20    590s] The power planner will set stripe antenna targets to none (no trimming allowed).
+[07/08 22:39:20    590s] Stripes will not be created over regions without power planning wires.
+[07/08 22:39:20    590s] The entire stripe set will break at the domain if one of the nets is not in the domain.
+[07/08 22:39:20    590s] add_stripes will break automatically at non-default domains when generating global stripes over the core area or default domain.
+[07/08 22:39:20    590s] Offset for stripe breaking is set to 0.
+[07/08 22:39:20    590s] 
+[07/08 22:39:20    590s] Initialize fgc environment(mem: 3285.0M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3285.0M)
+[07/08 22:39:20    590s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3285.0M)
+[07/08 22:39:20    590s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3285.0M)
+[07/08 22:39:20    590s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3285.0M)
+[07/08 22:39:20    590s] **WARN: (IMPPP-193):	The currently specified  spacing 0.200000 in -spacing option might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:39:20    590s] Starting stripe generation ...
+[07/08 22:39:20    590s] Non-Default Mode Option Settings :
+[07/08 22:39:20    590s]   NONE
+[07/08 22:39:20    590s] Stripe generation is complete.
+[07/08 22:39:20    590s] vias are now being generated.
+[07/08 22:39:20    590s] add_stripes created 6 wires.
+[07/08 22:39:20    590s] ViaGen created 12 vias, deleted 0 via to avoid violation.
+[07/08 22:39:20    590s] +--------+----------------+----------------+
+[07/08 22:39:20    590s] |  Layer |     Created    |     Deleted    |
+[07/08 22:39:20    590s] +--------+----------------+----------------+
+[07/08 22:39:20    590s] | Metal10|        6       |       NA       |
+[07/08 22:39:20    590s] |  Via10 |       12       |        0       |
+[07/08 22:39:20    590s] +--------+----------------+----------------+
+[07/08 22:39:20    590s] @innovus 7> add_stripes will allow jog to connect padcore ring and block ring.
+[07/08 22:39:23    590s] 
+[07/08 22:39:23    590s] Stripes will stop at the boundary of the specified area.
+[07/08 22:39:23    590s] When breaking rings, the power planner will consider the existence of blocks.
+[07/08 22:39:23    590s] Stripes will not extend to closest target.
+[07/08 22:39:23    590s] The power planner will set stripe antenna targets to none (no trimming allowed).
+[07/08 22:39:23    590s] Stripes will not be created over regions without power planning wires.
+[07/08 22:39:23    590s] The entire stripe set will break at the domain if one of the nets is not in the domain.
+[07/08 22:39:23    590s] add_stripes will break automatically at non-default domains when generating global stripes over the core area or default domain.
+[07/08 22:39:23    590s] Offset for stripe breaking is set to 0.
+[07/08 22:39:23    590s] add_stripes will allow jog to connect padcore ring and block ring.
+[07/08 22:39:23    590s] 
+[07/08 22:39:23    590s] Stripes will stop at the boundary of the specified area.
+[07/08 22:39:23    590s] When breaking rings, the power planner will consider the existence of blocks.
+[07/08 22:39:23    590s] Stripes will not extend to closest target.
+[07/08 22:39:23    590s] The power planner will set stripe antenna targets to none (no trimming allowed).
+[07/08 22:39:23    590s] Stripes will not be created over regions without power planning wires.
+[07/08 22:39:23    590s] The entire stripe set will break at the domain if one of the nets is not in the domain.
+[07/08 22:39:23    590s] add_stripes will break automatically at non-default domains when generating global stripes over the core area or default domain.
+[07/08 22:39:23    590s] Offset for stripe breaking is set to 0.
+[07/08 22:39:23    590s] 
+[07/08 22:39:23    590s] Initialize fgc environment(mem: 3285.0M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3285.0M)
+[07/08 22:39:23    590s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3285.0M)
+[07/08 22:39:23    590s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3285.0M)
+[07/08 22:39:23    590s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 3285.0M)
+[07/08 22:39:23    590s] **WARN: (IMPPP-193):	The currently specified  spacing 0.200000 in -spacing option might create min enclosed area violation. The required min enclosed area for layer Metal10 is 0.110000. If violation happens, increase the spacing to around 0.381662. The recommended spacing is the square root of min enclosure area.
+[07/08 22:39:23    590s] Starting stripe generation ...
+[07/08 22:39:23    590s] Non-Default Mode Option Settings :
+[07/08 22:39:23    590s]   NONE
+[07/08 22:39:23    590s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (3.710000, 0.060000) (3.710000, 13.810000) because same wire already exists.
+[07/08 22:39:23    590s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (8.710000, 0.060000) (8.710000, 13.810000) because same wire already exists.
+[07/08 22:39:23    590s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (13.710000, 0.060000) (13.710000, 13.810000) because same wire already exists.
+[07/08 22:39:23    590s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (4.130000, 1.460000) (4.130000, 12.410000) because same wire already exists.
+[07/08 22:39:23    590s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (9.130000, 1.460000) (9.130000, 12.410000) because same wire already exists.
+[07/08 22:39:23    590s] **WARN: (IMPPP-170):	The power planner failed to create a wire at (14.130000, 1.460000) (14.130000, 12.410000) because same wire already exists.
+[07/08 22:39:23    590s] Stripe generation is complete.
+[07/08 22:39:23    591s] @innovus 7> 
+[07/08 22:43:21    617s] --------------------------------------------------------------------------------
+[07/08 22:43:21    617s] Exiting Innovus on Wed Jul  8 22:43:21 2026
+[07/08 22:43:21    617s]   Total CPU time:     0:10:17
+[07/08 22:43:21    617s]   Total real time:    2:49:10
+[07/08 22:43:21    617s]   Peak memory (main): 2721.14MB
+[07/08 22:43:21    617s] 
+[07/08 22:43:21    617s] 
+[07/08 22:43:21    617s] *** Memory Usage v#1 (Current mem = 3284.973M, initial mem = 654.375M) ***
+[07/08 22:43:21    617s] 
+[07/08 22:43:21    617s] *** Summary of all messages that are not suppressed in this session:
+[07/08 22:43:21    617s] Severity  ID               Count  Summary                                  
+[07/08 22:43:21    617s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[07/08 22:43:21    617s] WARNING   IMPFP-3961           6  The techSite '%s' has no related standar...
+[07/08 22:43:21    617s] WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+[07/08 22:43:21    617s] WARNING   IMPPP-170            6  The power planner failed to create a wir...
+[07/08 22:43:21    617s] WARNING   IMPPP-193           42  The currently specified %s spacing %f %s...
+[07/08 22:43:21    617s] WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
+[07/08 22:43:21    617s] WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+[07/08 22:43:21    617s] *** Message Summary: 60 warning(s), 0 error(s)
+[07/08 22:43:21    617s] 
+[07/08 22:43:21    617s] --- Ending "Innovus" (totcpu=0:10:17, real=2:49:08, mem=3285.0M) ---
