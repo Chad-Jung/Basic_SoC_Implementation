@@ -1,0 +1,72 @@
+xmsim(64): 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xmsim(64)	22.03-s012: Started on Aug 18, 2026 at 09:03:02 KST
+xmsim
+    -MESS
+    tb_4_BIT_SHIFT_REGISTER
+    -gui
+
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_4_BIT_SHIFT_REGISTER.clk tb_4_BIT_SHIFT_REGISTER.clr_n tb_4_BIT_SHIFT_REGISTER.i_d tb_4_BIT_SHIFT_REGISTER.i_s tb_4_BIT_SHIFT_REGISTER.i_sl tb_4_BIT_SHIFT_REGISTER.i_sr tb_4_BIT_SHIFT_REGISTER.o_q
+Created probe 1
+xcelium> run
+Time=0 | clk=0 | clr_n=0 | i_s=00 | state=00 | i_d=0000 | i_sr=0 | i_sl=0 | o_q=0000
+Time=5000 | clk=1 | clr_n=0 | i_s=00 | state=00 | i_d=0000 | i_sr=0 | i_sl=0 | o_q=0000
+Time=10000 | clk=0 | clr_n=0 | i_s=00 | state=00 | i_d=0000 | i_sr=0 | i_sl=0 | o_q=0000
+Time=12000 | clk=0 | clr_n=1 | i_s=00 | state=00 | i_d=0000 | i_sr=0 | i_sl=0 | o_q=0000
+Time=15000 | clk=1 | clr_n=1 | i_s=00 | state=00 | i_d=0000 | i_sr=0 | i_sl=0 | o_q=0000
+Time=20000 | clk=0 | clr_n=1 | i_s=00 | state=00 | i_d=0000 | i_sr=0 | i_sl=0 | o_q=0000
+Time=22000 | clk=0 | clr_n=1 | i_s=11 | state=00 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0000
+Time=25000 | clk=1 | clr_n=1 | i_s=11 | state=11 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0000
+Time=30000 | clk=0 | clr_n=1 | i_s=11 | state=11 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0000
+Time=35000 | clk=1 | clr_n=1 | i_s=11 | state=11 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=40000 | clk=0 | clr_n=1 | i_s=11 | state=11 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=45000 | clk=1 | clr_n=1 | i_s=11 | state=11 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=50000 | clk=0 | clr_n=1 | i_s=11 | state=11 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=52000 | clk=0 | clr_n=1 | i_s=00 | state=11 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=55000 | clk=1 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=60000 | clk=0 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=65000 | clk=1 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=70000 | clk=0 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=72000 | clk=0 | clr_n=1 | i_s=01 | state=00 | i_d=1010 | i_sr=1 | i_sl=0 | o_q=1010
+Time=75000 | clk=1 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=1 | i_sl=0 | o_q=1010
+Time=80000 | clk=0 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=1 | i_sl=0 | o_q=1010
+Time=82000 | clk=0 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=85000 | clk=1 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0101
+Time=90000 | clk=0 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0101
+Time=92000 | clk=0 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=1 | i_sl=0 | o_q=0101
+Time=95000 | clk=1 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=1 | i_sl=0 | o_q=1010
+Time=100000 | clk=0 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=1 | i_sl=0 | o_q=1010
+Time=102000 | clk=0 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=1010
+Time=105000 | clk=1 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0101
+Time=110000 | clk=0 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0101
+Time=115000 | clk=1 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0010
+Time=120000 | clk=0 | clr_n=1 | i_s=01 | state=01 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0010
+Time=122000 | clk=0 | clr_n=1 | i_s=10 | state=01 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0010
+Time=125000 | clk=1 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0001
+Time=130000 | clk=0 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0001
+Time=132000 | clk=0 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0001
+Time=135000 | clk=1 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0010
+Time=140000 | clk=0 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=0 | o_q=0010
+Time=142000 | clk=0 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0010
+Time=145000 | clk=1 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0101
+Time=150000 | clk=0 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0101
+Time=155000 | clk=1 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=1011
+Time=160000 | clk=0 | clr_n=1 | i_s=10 | state=10 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=1011
+Time=162000 | clk=0 | clr_n=1 | i_s=00 | state=10 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=1011
+Time=165000 | clk=1 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0111
+Time=170000 | clk=0 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0111
+Time=175000 | clk=1 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0111
+Time=180000 | clk=0 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0111
+Time=185000 | clk=1 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0111
+Time=190000 | clk=0 | clr_n=1 | i_s=00 | state=00 | i_d=1010 | i_sr=0 | i_sl=1 | o_q=0111
+Simulation complete via $finish(1) at time 192 NS + 0
+./tb_4_BIT_SHIFT_REGISTER.v:101         #20 $finish                     ;
+xcelium> ^C
+xcelium> exit
+TOOL:	xmsim(64)	22.03-s012: Exiting on Aug 18, 2026 at 09:07:41 KST  (total: 00:04:39)

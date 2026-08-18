@@ -1,0 +1,2 @@
+set_db init_lib_search_path /home/hah014/Basic_SoC_Implementation/3_SYN/1_LIB
+set_db init_hdl_search_hdl /home/hah014/Basic_SoC_Implementation/3_SYN/4_SAMPLE_RTL

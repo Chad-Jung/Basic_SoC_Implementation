@@ -1,0 +1,43 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[02:15:43.163193] Configured Lic search path (22.01-s003): 5280@172.31.52.241
+
+Version: 22.17-s071_1, built Wed Sep 11 20:37:05 PDT 2024
+Options: 
+Date:    Wed Jul 08 02:15:43 2026
+Host:    kopo-seongnam (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*2physical cpus*Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz 28160KB) (394624392KB)
+PID:     203060
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+[02:15:43.237483] Periodic Lic check successful
+[02:15:43.237496] Feature usage summary:
+[02:15:43.237496] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (0 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (14 seconds elapsed).
+
+WARNING: This version of the tool is 663 days old.
+@genus:root: 1> gui raise
+ambiguous command name "gui": gui_clear_pv gui_clear_sv gui_configure_pi_schematic gui_hide gui_highlight_hier_instances_pv gui_highlight_pv gui_highlight_sv gui_legend gui_open_schematic gui_pv_airline_add gui_pv_airline_delete gui_pv_airline_display gui_pv_airline_raw_add gui_pv_connectivity_airlines gui_pv_display_collection gui_pv_draw_net gui_pv_selection gui_pv_steiner gui_raise gui_redo_pv gui_redraw_pv gui_reset gui_select_highlighted_pv gui_selection gui_show gui_snapshot_pv gui_snapshot_sv gui_sv_get_instance gui_sv_load gui_undo_pv gui_update gui_zoom_fit_pv gui_zoom_fit_sv gui_zoom_pv
+@genus:root: 2> gui_raise
+Cadence Help logging started at /home/hah014/.config/cadence/cdnshelp.log file.
+
+Lic Summary:
+[02:21:16.456144] Cdslmd servers: kopo-seongnam
+[02:21:16.456168] Feature usage summary:
+[02:21:16.456169] Genus_Synthesis
+
+Normal exit.

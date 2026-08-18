@@ -1,0 +1,31 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Tue Aug 18 10:26:28 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v22.17-s086_1 (64bit) 09/24/2024 10:51 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: NanoRoute 22.17-s086_1 NR240905-1647/22_17-UB (database version 18.20.629) {superthreading v2.20}
+#@(#)CDS: AAE 22.17-s013 (64bit) 09/24/2024 (Linux 3.10.0-693.el7.x86_64)
+#@(#)CDS: CTE 22.17-s017_1 () Sep 12 2024 04:53:54 ( )
+#@(#)CDS: SYNTECH 22.17-s006_1 () Aug 12 2024 03:52:27 ( )
+#@(#)CDS: CPE v22.17-s051
+#@(#)CDS: IQuantus/TQuantus 21.2.2-s369 (64bit) Tue May 7 14:30:42 PDT 2024 (Linux 3.10.0-693.el7.x86_64)
+
+gui_select -rect {0.07500 0.05000 0.07200 0.05100}
+set_db init_power_nets VDD
+set_db init_ground_nets VSS
+read_mmmc ../../../0_SAMPLE/sample.view
+#@ Begin verbose source ../../../0_SAMPLE/sample.view (pre)
+create_library_set -name max_timing\
+   -timing ../../1_LIB/slow_vdd1v0_basicCells.lib
+#@ End verbose source ../../../0_SAMPLE/sample.view
+#@ Begin verbose source ../../../0_SAMPLE/sample.view (pre)
+create_library_set -name max_timing\
+   -timing ../../1_LIB/slow_vdd1v0_basicCells.lib
+#@ End verbose source ../../../0_SAMPLE/sample.view
+#@ Begin verbose source ../../../0_SAMPLE/sample.view (pre)
+create_library_set -name max_timing\
+   -timing ../../1_LIB/slow_vdd1v0_basicCells.lib
+#@ End verbose source ../../../0_SAMPLE/sample.view

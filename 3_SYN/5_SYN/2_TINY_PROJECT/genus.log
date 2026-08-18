@@ -1,0 +1,52 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[09:49:19.163329] Configured Lic search path (22.01-s003): 5280@172.31.52.241
+
+Version: 22.17-s071_1, built Wed Sep 11 20:37:05 PDT 2024
+Options: -files mysyn.tcl 
+Date:    Tue Aug 18 09:49:19 2026
+Host:    kopo-seongnam (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*2physical cpus*Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz 28160KB) (394624392KB)
+PID:     307244
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+[09:49:20.000472] Periodic Lic check successful
+[09:49:20.000488] Feature usage summary:
+[09:49:20.000489] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (2 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (13 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source mysyn.tcl
+#@ Begin verbose source ./mysyn.tcl
+@file(mysyn.tcl) 1: set_db init_lib_search_path /home/hah014/Basic_SoC_Implementation/3_SYN/1_LIB
+  Setting attribute of root '/': 'init_lib_search_path' = /home/hah014/Basic_SoC_Implementation/3_SYN/1_LIB
+@file(mysyn.tcl) 2: set_db init_hdl_search_hdl /home/hah014/Basic_SoC_Implementation/3_SYN/4_SAMPLE_RTL
+Error   : <Start> word is not recognized. [TUI-182] [set_db]
+        : 'init_hdl_search_hdl' is not a recognized object/attribute. Type 'help root:' to get a list of all supported objects and attributes.
+        : Check if the given <Start> word is a valid object_type, object or attribute.
+#@ End verbose source ./mysyn.tcl
+1
+Encountered problems processing file: mysyn.tcl
+WARNING: This version of the tool is 704 days old.
+@genus:root: 2> gui_raise
+
+Lic Summary:
+[09:50:15.067177] Cdslmd servers: kopo-seongnam
+[09:50:15.067200] Feature usage summary:
+[09:50:15.067201] Genus_Synthesis
+
+Normal exit.
